@@ -67,6 +67,16 @@ p{
     text-shadow: none;
 }
 
+@keyframes zoom{
+    0%{
+        transform: scale(1.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
 section{
     display: flex;
     gap: 2rem;
@@ -82,4 +92,65 @@ section{
     align-items: flex-start;
     gap: 2rem;
 }
-.
+
+#secao-projetos{
+    background-image: radial-gradient(circle, rgb(121, 111, 80), rgb(116, 150, 80), rgb(80, 100, 30));
+    color: var(--color-textdefault);
+    font-size: 2rem;
+    height: 100vh;
+}
+
+#secao-projetos ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover .card-image{
+    opacity: 1;
+    bottom: 20%;
+}
+
+.card-info{
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transition: bottom 0.7s;
+}
+
+#secao-apresentacao {
+    background-image: radial-gradient(rgb(111, 33, 150), rgb(130, 50, 200), rgb(200, 40, 300));
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#perfil_texto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+#projetos_texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+
+
+
+
+
+
