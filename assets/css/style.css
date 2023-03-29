@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%; /*10px / 16px*/
+    --font-header: 'Poppins';
+    --font-apresentacao: 'Inter';
+    --color-textdefault: 'black';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../images/futebol-no-conceito-de-sucesso-do-objetivo.jpg);
+    background-size: cover;
+    color: #FFF;
+    padding: 5rem 5rem;
+    align-items: flex-start;
+}
+
+
+h1 {
+    font-family: var(--font-header);
+    font-weight: 900;
+    font-size: 10rem;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.15rem rgb(0, 0, 0);
+    margin-bottom: 32rem;
+}
+
+span {
+    font-family: var(--font-header);
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.12rem black;
+}
+
+.botao {
+    padding: 1.0rem 8.0rem;
+    background: #d9d9d9b3;
+    border-radius: 4rem;
+    font-family: var(--font-header);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #FFF;
+    text-shadow: 0 0.5rem 0.5rem #00000067;
+    text-decoration: none;
+}
+
+.botao-projetos {
+    padding: 1.0rem 8.0rem;
+    background: #1b6e0bb3;
+    border-radius: 4rem;
+    font-family: var(--font-header);
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #FFF;
+    text-shadow: 0 0.5rem 0.5rem #00000067;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 4.5rem;
+    color: white;
+    text-shadow: 0 0.5rem 0.5rem #00000067;
+}
+
+p {   
+    font-family: Poppins;
+    font-weight: 200;
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 0 0.5rem 0.5rem #00000067;
+}
+
+h3 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 4.5rem;
+    color: white;
+    text-shadow: 0 0.5rem 0.5rem #00000067;
+}
+
+h4 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: white;
+    text-shadow: 0 0.5rem 0.5rem #00000067;
+}
+
+h5 {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 0.5rem 0.5rem #00000067;
+}
+
+h6 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0 0.5rem 0.5rem #00000067;
+}
+
+.perfil {
+    margin-top: 3rem;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50rem;
+    animation: zoom 1s;
+    border: white solid 4px;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+#texto-apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#secao-projetos{
+    background-image: radial-gradient(circle,rgb(129, 156, 98),rgb(115,140,76),rgb(76,95,28));
+    color: var(--color-textdefault);
+    font-size: 2rem;
+    height: 100vh;
+}
+
+#secao-projetos ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover .card-image{
+    opacity: .5;
+}
+
+.card:hover .card-info{
+    opacity: 1;
+    bottom: 20%;
+}
+
+.card-image img{
+    height: 60rem;
+    width: 38rem;
+    border-radius: 1rem;
+    border: white solid 3.5px;
+}
+
+.card-info{
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, bottom 0.7s;
+}
+#secao-apresentacao {   
+    background-image: radial-gradient(circle,rgb(129, 156, 98),rgb(115,140,76),rgb(76,95,28));
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#perfil_texto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+#projetos_texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#secao-orcamento {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-image: radial-gradient(circle,rgb(129, 156, 98),rgb(115,140,76),rgb(76,95,28));
+    height: 100vh;
+}
+
+#secao-orcamento form{   
+    padding: 2rem;
+    background-color: #FFF;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    row-gap: 1rem;
+    column-gap: 2rem;
+}
+
+#secao-orcamento h5{   
+    position: relative;
+    top: -1rem;
+    font-size: 4rem;
+}
+
+#secao-orcamento output{
+    grid-column: 2;
+}
+
+input[type=number]{
+    padding: .5rem;
+    background-color: #5151;
+    color: var(--color-textdefault)
+}
