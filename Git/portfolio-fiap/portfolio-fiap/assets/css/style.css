@@ -147,10 +147,35 @@ section{
     gap: 3rem;
 }
 
+#secao-orçamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #212121;
+}
 
+#secao-orçamento form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    row-gap: 1rem;
+    padding: 2rem;
+    background-color: #FFF;
+    border-radius: 10px;
+    position: relative;
+}
 
+#secao-orcamento h3{
+    position: absolute;
+    top: -10%;
+    background-color: darkslategray;
+    color: #FFF;
+}
 
-
-
-
-
+input[type=number]{
+    padding: .5rem;
+    background-color: #212121;
+    color: var(--color-textdefault);
+    border: none;
+}
