@@ -8,22 +8,17 @@ document.querySelector("#prazo").addEventListener("change", calcularOrcamneto)
 
 
 function calcularOrcamneto() {
-    let qtde = document.querySelector("#qtde").value
-    let preco = qtde * 100
-
-    let js = document.querySelector("#js").checked
-
     
-        if (js) preco *= 1.1
+    let preco = qtde.value * 100
+    if (js.checked) preco *= 1.1
+    if(layout_sim.checked) preco += 500
 
-        let layout = document.querySelector("#layout_sim").checked
-        if(layout) preco += 500
+    let taxadeUrgencia = preco * (1.1 - prazo.value * 0.1)
+    preco += taxadeUrgencia
 
-        let prazo = document.querySelector("#prazo").value
-        document.querySelector("#label_prazo").innerHTML = "Prazo(" + prazo + " semanas)"
+    label_prazo.innerHTML = `Prazo(${prazo.value} semanas)`
     
-
-    document.querySelector("#preco").innerHTML = "R$" + preco.toFixed(2)
+     output.innerHTML = "R$" + preco.toFixed(2)
 }
 
 //manioulação do DOM
