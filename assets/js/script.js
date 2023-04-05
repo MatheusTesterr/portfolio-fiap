@@ -18,7 +18,7 @@ function calcularOrcamneto() {
 
     label_prazo.innerHTML = `Prazo(${prazo.value} semanas)`
     
-     output.innerHTML = "R$" + preco.toFixed(2)
+    output.innerHTML = `R$ ${preco.toFixed(2)}`
 }
 
 //manioulação do DOM
