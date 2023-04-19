@@ -6,16 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pointer.com</title>
     <link rel= "stylesheet" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body>
 
-    <body>
-        <header>
+    
+     <header>
             <h1> Pointer </h1>
             <span> Acompanhe as<br>melhores notícias do<br>mundo da tecnologia.<br><br> </span>
             <a href="#secao-apresentacao" class="botao">Inscreva-se</a> 
-        </header>
+     </header>
         
-            <section id="secao-apresentacao">
+     <section id="secao-apresentacao">
+        <nav>
+            <div class="hamburguer">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </div>
+    
+            <ul id="menu">
+                <li>
+                    <a href="#secao-home">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-apresentacao">
+                        <i class="fa-solid fa-user"></i>
+                        Apresentação
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-projetos">
+                        <i class="fa-solid fa-code"></i>
+                        Projetos
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-orcamento">
+                        <i class="fa-solid fa-money-bill"></i>
+                        Orçamento
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
                 <div id="perfil_texto">
                     <div id="texto-apresentacao">
                         <h2> Matheus Souza de Oliveira </h2>
@@ -27,9 +64,9 @@
                 </div>
                 
                 <a href="#secao-projetos" class="botao-projetos">Vizualizar Projetos!</a>
-            </section>
+     </section>
 
-            <section id="secao-projetos">
+     <section id="secao-projetos">
             <div id="projetos_texto">
                 <h6>
                     Projetos
@@ -102,6 +139,7 @@
             </section>
 
             <script src="./assets/js/script.js"></script>
+            <script src="./assets/js/menu.js"></script>
 
     </body>
 
