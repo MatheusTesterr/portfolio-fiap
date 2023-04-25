@@ -1,26 +1,30 @@
+console.log("calcular orcamento")
 
+let inputQtde = document.querySelector("#qtde")
+let inputJs = document.querySelector("#js")
+let inputLayout = document.querySelector("#layout-sim")
+let inputLayoutNao = document.querySelector("#layout-nao")
+let inputPrazo = document.querySelector("#prazo")
 
-document.querySelector("#qtde").addEventListener("change", calcularOrcamneto)
-document.querySelector("#js").addEventListener("change", calcularOrcamneto)
-document.querySelector("#layout_sim").addEventListener("change", calcularOrcamneto)
-document.querySelector("#layout_nao").addEventListener("change", calcularOrcamneto)
-document.querySelector("#prazo").addEventListener("change", calcularOrcamneto)
+inputQtde.addEventListener("change", atualizarOrcamento)
+inputJs.addEventListener("change", atualizarOrcamento)
+inputLayout.addEventListener("change", atualizarOrcamento)
+inputLayoutNao.addEventListener("change", atualizarOrcamento)
+inputPrazo.addEventListener("change", atualizarOrcamento)
 
+function atualizarOrcamento(){
+    let preco = inputQtde.value * 100
+    let js = inputJs.checked
+    let layout = inputLayout.checked
+    let prazo = inputPrazo.value
 
-function calcularOrcamneto() {
-    
-    let preco = qtde.value * 100
-    if (js.checked) preco *= 1.1
-    if(layout_sim.checked) preco += 500
+    let labelPrazo = document.querySelector("label[for=prazo]")
+    labelPrazo.innerHTML =  `Prazo (${prazo} semanas)`
 
-    let taxadeUrgencia = preco * (1.1 - prazo.value * 0.1)
-    preco += taxadeUrgencia
+    if(js) preco *= 1.1
+    if(layout) preco += inputQtde.value * 30
+    let taxaDeUrgencia = 1 - prazo*.05
+    preco *= 1 + taxaDeUrgencia
 
-    label_prazo.innerHTML = `Prazo(${prazo.value} semanas)`
-    
-    output.innerHTML = `R$ ${preco.toFixed(2)}`
+    document.querySelector("#preco").innerHTML = "R$ " + preco.toFixed(2)
 }
-
-//manioulação do DOM
-
-//ECMAScript
