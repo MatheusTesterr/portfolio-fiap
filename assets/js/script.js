@@ -2,8 +2,8 @@ console.log("calcular orcamento")
 
 let inputQtde = document.querySelector("#qtde")
 let inputJs = document.querySelector("#js")
-let inputLayout = document.querySelector("#layout-sim")
-let inputLayoutNao = document.querySelector("#layout-nao")
+let inputLayout = document.querySelector("#layout_sim")
+let inputLayoutNao = document.querySelector("#layout_nao")
 let inputPrazo = document.querySelector("#prazo")
 
 inputQtde.addEventListener("change", atualizarOrcamento)
